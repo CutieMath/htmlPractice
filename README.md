@@ -1,5 +1,5 @@
 # htmlPractice
 Practice HTML by creating personal websites  
  
-1-PersonalWebsite  
+**1-PersonalSite**  
 The basic HTML
