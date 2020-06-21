@@ -3,9 +3,12 @@ body {
 }
 
 hr{
-    height: 0px;
     border-style: dotted none none none;
     border-width: 5px;
-    border-color: white;
+    border-color: #f6f6f6;
     width: 5%;
+}
+
+h1, h3{
+  color: #8785a2;
 }
