@@ -1,5 +1,6 @@
 body {
-
+  background-color: #ffc7c7;
+  margin: 0;
 }
 
 h3 {
@@ -16,26 +17,15 @@ hr {
 }
 
 .top-container {
-  background-color: #f6f6f6;
-  height: 200px;
-  width: 200px;
-  padding: 10px;
-  border: solid 10px;
-  border-color: #8785a2;
+  background-image: url("../images/ProfilePicLarge.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  width: 100%;
 }
 
 .middle-container {
-  background-color: #ffe2e2;
-  height: 200px;
-  width: 200px;
-  border: solid 20px;
-  margin-left: 240px;
-}
-
-.bottom-container {
   background-color: #ffc7c7;
-  height: 200px;
-  width: 200px;
-  margin: 10px;
-  margin-left: 490px;
+  height: 800px;
+  padding: 10px;
 }
