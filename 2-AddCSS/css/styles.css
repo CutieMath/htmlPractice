@@ -1,5 +1,12 @@
 body {
     background-color: #ffc7c7;
+    margin: 0;
+}
+
+h1{
+  color: #8785a2;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 hr{
@@ -7,8 +14,4 @@ hr{
     border-width: 5px;
     border-color: #f6f6f6;
     width: 5%;
-}
-
-h1, h3{
-  color: #8785a2;
 }
