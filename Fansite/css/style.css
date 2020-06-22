@@ -1,10 +1,7 @@
+/***** TAG SELECTORS ****/
 h1 {
   color: #ffc7c7;
   font-size: 100px;
-}
-
-p {
-  color: #ffe2e2;
 }
 
 body {
@@ -13,4 +10,18 @@ body {
 
 img {
   background-color: #ffc7c7;
+}
+
+
+/***** CLASS SELECTORS ****/
+.level1 {
+  color: #f6f6f6;
+}
+
+.level2{
+  color: #ffe2e2;
+}
+
+.level3{
+  color: #ffc7c7;
 }
