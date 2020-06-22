@@ -1,6 +1,6 @@
 /***** TAG SELECTORS ****/
 h1 {
-  color: #ffc7c7;
+  color: #8785a2;
   font-size: 100px;
 }
 
@@ -12,16 +12,32 @@ img {
   background-color: #ffc7c7;
 }
 
+h1:hover {
+  background-color: #f2aaaa;
+}
+
 
 /***** CLASS SELECTORS ****/
 .level1 {
   color: #f6f6f6;
 }
 
-.level2{
+.level2 {
   color: #ffe2e2;
 }
 
-.level3{
+.level3 {
+  color: #ffc7c7;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+
+/***** ID SELECTORS ****/
+#heading {
+  /* id selectors overrides tag selectors */
+  /* but can only be used for one element */
   color: #ffc7c7;
 }
