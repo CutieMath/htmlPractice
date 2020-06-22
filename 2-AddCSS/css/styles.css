@@ -1,17 +1,41 @@
 body {
-    background-color: #ffc7c7;
-    margin: 0;
+
 }
 
-h1{
+h3 {
   color: #8785a2;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-hr{
+hr {
     border-style: dotted none none none;
     border-width: 5px;
     border-color: #f6f6f6;
     width: 5%;
+}
+
+.top-container {
+  background-color: #f6f6f6;
+  height: 200px;
+  width: 200px;
+  padding: 10px;
+  border: solid 10px;
+  border-color: #8785a2;
+}
+
+.middle-container {
+  background-color: #ffe2e2;
+  height: 200px;
+  width: 200px;
+  border: solid 20px;
+  margin-left: 240px;
+}
+
+.bottom-container {
+  background-color: #ffc7c7;
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+  margin-left: 490px;
 }
