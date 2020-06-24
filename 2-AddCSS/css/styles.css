@@ -1,5 +1,5 @@
 body {
-  background-color: #ffc7c7;
+  background-color: #f2aaaa;
   margin: 0;
   text-align: center;
   font-family: "Montserrat", arial, sans-serif;
@@ -65,7 +65,6 @@ table {
 }
 
 .middle-container {
-  background-color: #ffc7c7;
   height: 600px;
   padding: 10px;
   position: relative;
