@@ -16,6 +16,10 @@ h1:hover {
   background-color: #f2aaaa;
 }
 
+iframe {
+  width: 80%;
+}
+
 
 /***** CLASS SELECTORS ****/
 .level1 {
