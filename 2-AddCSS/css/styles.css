@@ -4,6 +4,7 @@ body {
   text-align: center;
   font-family: "Montserrat", arial, sans-serif;
   font-weight: bold;
+  font: 1em;
 }
 
 h2, h3, p {
@@ -45,18 +46,17 @@ table {
 
 .cutie-button {
   background-color: #8785a2;
-  border-radius: 100px;
+  border-radius: 50px;
   border: none;
   color: #f6f6f6;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: bold;
   font-family: "Montserrat", arial, sans-serif;
-  line-height: 3;
   opacity: 0.7;
-  padding: 10px 30px;
+  padding: 20px 30px;
   text-align: center;
-  transition-duration: 0.4s;
+  transition-duration: 0.1s;
 }
 
 .cutie-button:hover {
@@ -65,7 +65,7 @@ table {
 }
 
 .middle-container {
-  height: 600px;
+  height: 1000px;
   padding: 10px;
   position: relative;
 }
@@ -74,7 +74,34 @@ table {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    top: 130px;
+    top: 100px;
+}
+
+.cute-icon {
+  height: 100px;
+  width: 100px;
+}
+
+.cute-container {
+  position: absolute;
+  left: 65%;
+  bottom: 67%;
+}
+
+.cute-container:hover {
+  filter: brightness(70%);
+}
+
+.daddy {
+  position: relative;
+  top: 200px;
+}
+
+.source {
+  position: relative;
+  left: 130px;
+  font-size: 0.7rem;
+  font-weight: normal;
 }
 
 .github-icon {
@@ -82,9 +109,19 @@ table {
   width: auto;
 }
 
-.github-div {
+.github-container {
   position: relative;
-  top: 200px;
+  top: 300px;
+}
+
+.github-icon:hover {
+  filter: brightness(90%);
+}
+
+.email-container {
+  position: relative;
+  top: 300px;
+  font-size: 0.7rem;
 }
 
 .bottom-container {
