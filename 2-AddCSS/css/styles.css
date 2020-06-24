@@ -4,7 +4,7 @@ body {
 }
 
 h3 {
-  color: #8785a2;
+  color: #f6f6f6;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -22,6 +22,33 @@ hr {
   background-position: center;
   height: 800px;
   width: 100%;
+  position: absolute;
+}
+
+.cutie-button-div {
+  position: relative;
+  left: 43%;
+  top: 350px;
+}
+
+.cutie-button {
+  background-color: #8785a2;
+  border-radius: 100px;
+  border: none;
+  color: #f6f6f6;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 3;
+  opacity: 0.7;
+  padding: 10px 30px;
+  text-align: center;
+  transition-duration: 0.4s;
+}
+
+.cutie-button:hover {
+  background-color: #8785a2;
+  opacity: 1;
 }
 
 .middle-container {
