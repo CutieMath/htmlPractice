@@ -1,12 +1,19 @@
 body {
   background-color: #ffc7c7;
   margin: 0;
+  text-align: center;
+  font-family: "Montserrat", arial, sans-serif;
+  font-weight: bold;
 }
 
-h3 {
+h3, p {
   color: #f6f6f6;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+a {
+  color: #f6f6f6;
 }
 
 hr {
@@ -14,6 +21,11 @@ hr {
     border-width: 5px;
     border-color: #f6f6f6;
     width: 5%;
+}
+
+table {
+  color: #f6f6f6;
+  text-align: left;
 }
 
 .top-container {
@@ -25,10 +37,10 @@ hr {
   position: relative;
 }
 
+
 .cutie-button-div {
   position: relative;
-  left: 43%;
-  top: 350px;
+  top: 45%;
 }
 
 .cutie-button {
@@ -39,6 +51,7 @@ hr {
   cursor: pointer;
   font-size: 20px;
   font-weight: bold;
+  font-family: "Montserrat", arial, sans-serif;
   line-height: 3;
   opacity: 0.7;
   padding: 10px 30px;
@@ -56,4 +69,37 @@ hr {
   height: 600px;
   padding: 10px;
   position: relative;
+}
+
+.center-table {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 130px;
+}
+
+.project-heading {
+    position: relative;
+    top: 50px;
+}
+
+.github-icon {
+  height: 50px;
+  width: auto;
+}
+
+.github-div {
+  position: relative;
+  top: 200px;
+}
+
+.bottom-container {
+  background-color: #8785a2;
+  height: 100px;
+  width: auto;
+}
+
+.footer {
+  position: relative;
+  top: 40px;
 }
