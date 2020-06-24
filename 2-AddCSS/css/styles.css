@@ -22,7 +22,7 @@ hr {
   background-position: center;
   height: 800px;
   width: 100%;
-  position: absolute;
+  position: relative;
 }
 
 .cutie-button-div {
@@ -56,5 +56,4 @@ hr {
   height: 600px;
   padding: 10px;
   position: relative;
-  top: 800px;
 }
