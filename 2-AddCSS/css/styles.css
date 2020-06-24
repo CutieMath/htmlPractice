@@ -53,6 +53,8 @@ hr {
 
 .middle-container {
   background-color: #ffc7c7;
-  height: 800px;
+  height: 600px;
   padding: 10px;
+  position: relative;
+  top: 800px;
 }
