@@ -20,6 +20,10 @@ iframe {
   width: 80%;
 }
 
+a {
+  text-decoration: none;
+}
+
 
 /***** CLASS SELECTORS ****/
 .level1 {
@@ -36,6 +40,11 @@ iframe {
 
 .bold {
   font-weight: bold;
+}
+
+.jimin {
+  font-family: monospace;
+  font-size: 2em;
 }
 
 
