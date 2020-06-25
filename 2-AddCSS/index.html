@@ -12,7 +12,7 @@
 <body>
   <div class="top-container">
     <div class="cutie-button-div">
-      <button type="button" name="cutie-button" class="cutie-button">♡ Cutie Math ♡</button>
+      <button id="scroll" type="button" name="cutie-button" class="cutie-button">♡ Cutie Math ♡</button>
     </div>
     <div class="cute-container">
       <a target="_blank" href="https://cutiemath.github.io/htmlPractice/Fansite/">
@@ -77,6 +77,15 @@
       <p>© 2020 <a href="https://cutiemath.github.io/htmlPractice/2-AddCSS/">Cutie Math</a></p>
     </div>
   </div>
+
+  <script>
+    const btn = document.getElementById('scroll');
+
+    btn.addEventListener('click', () => window.scrollTo({
+    top: 600,
+    behavior: 'smooth',
+    }));
+  </script>
 
 </body>
 
