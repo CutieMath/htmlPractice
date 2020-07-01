@@ -18,6 +18,10 @@ a {
   color: #f6f6f6;
 }
 
+a:hover {
+  color: #8785a2;
+}
+
 hr {
     border-style: dotted none none none;
     border-width: 5px;
@@ -104,6 +108,11 @@ table {
   font-weight: normal;
 }
 
+.source-a {
+  text-decoration: none;
+}
+
+
 .github-icon {
   height: 50px;
   width: auto;
@@ -124,7 +133,16 @@ table {
   height: 100px;
 }
 
+
 .footer {
   position: relative;
   top: 45%;
+}
+
+.footer-a {
+  text-decoration: none;
+}
+
+.footer-a:hover {
+  color: #ffc7c7;
 }
