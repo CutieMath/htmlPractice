@@ -6,7 +6,7 @@ Website use basic HTML
 https://cutiemath.github.io/htmlPractice/1-BasicHTML  
 
 **2-AddCSS**  
-Website with HTML and CSS 
+Website with HTML and CSS   
 https://cutiemath.github.io/htmlPractice/2-AddCSS/   
   
 **3-Bootstrap**  
