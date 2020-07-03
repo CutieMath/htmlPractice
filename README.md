@@ -10,7 +10,7 @@ Website with HTML and CSS
 https://cutiemath.github.io/htmlPractice/2-AddCSS    
   
 **3-Bootstrap**  
-Learning how to use bootstrap (Current progress-July)  
+Learning how to use bootstrap (Current progress-July 2020)  
 https://cutiemath.github.io/htmlPractice/3-Bootstrap  
 
 **Fun**  
