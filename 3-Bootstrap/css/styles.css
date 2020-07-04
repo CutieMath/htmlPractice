@@ -1,6 +1,69 @@
+body {
+  text-align: center;
+  font-family:'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-family: 'Erica One', monospace;
+  margin: 0;
+  font-size: 15rem;
+  line-height: 0.8;
+}
+
+#title {
+  background-color: #ffc7c7;
+}
+
+/* Navigation Bar */
+.navbar-brand {
+  font-size: 2rem;
+}
+
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+}
+
+/* Main CutieMath Section */
+.dd-button {
+  margin: 10% 1%;
+}
+
+.container-fluid{
+  padding: 3% 8%;
+}
+
+.empty-margin{
+  padding: 8%;
+}
+
+/* CutieMath Face */
+.loveface-img {
+  width: 15%;
+  transform: rotate(25deg);
+  position: absolute;
+  right: 10%;
+  bottom: 30%;
+}
+
+.loveheart-img {
+  width: 15%;
+}
+
 .press-img {
   width: 100%;
-  margin: 10%;
+}
+
+.press-width {
+  margin: auto;
 }
 
 .press-pos {
