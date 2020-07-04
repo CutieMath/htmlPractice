@@ -35,10 +35,6 @@ h1 {
 }
 
 /* Main CutieMath Section */
-.dd-button {
-  margin: 10% 1%;
-}
-
 .container-fluid{
   padding: 3% 8%;
 }
@@ -64,6 +60,11 @@ h1 {
 /* About */
 #about {
   background-color: #f6f6f6;
+  padding: 3% 8%;
+}
+
+h3 {
+  font-weight: 800;
 }
 
 .about-title {
@@ -73,8 +74,6 @@ h1 {
 }
 
 .icon-container {
-  padding-top: 10%;
-  padding-bottom: 10%;
   margin: 0;
 }
 
@@ -87,7 +86,10 @@ h1 {
   color: #e75a70;
 }
 
-
+.skill-box {
+  padding-top: 9%;
+  padding-bottom: 9%;
+}
 
 
 .press-img {
