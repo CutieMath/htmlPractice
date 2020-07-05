@@ -12,7 +12,7 @@ h1 {
 }
 
 #title {
-  background-color: #ffc7c7;
+  background-color: #f2aaaa;
   position: relative;
 }
 
@@ -51,10 +51,6 @@ h1 {
   bottom: 30%;
 }
 
-.loveheart-img {
-  width: 15%;
-}
-
 
 /* About */
 #about {
@@ -77,7 +73,7 @@ h3 {
 
 .about-i {
   font-size: 4rem;
-  color: #ffc7c7;
+  color: #f2aaaa;
 }
 
 .about-i:hover {
@@ -90,14 +86,89 @@ h3 {
 }
 
 
-.press-img {
-  width: 100%;
+/* Projects */
+#projects {
+  background-color: #f2aaaa;
+  padding: 10%;
 }
 
-.press-width {
-  margin: auto;
+.love-heart {
+  width: 10%;
+  padding-bottom: 10%;
 }
 
-.press-pos {
+.love-heart:hover {
+  filter: brightness(1.50);
+}
+
+table {
+  color: #fff;
+  text-align: left;
+}
+
+td, th {
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.notes {
+  font-size: 1.2rem;
+}
+
+.table-div {
+  color: #fff;
+}
+
+.table-a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #8785a2;
+}
+
+.center-table {
+  position: relative;
+  top: 10%;
   margin: auto;
+  text-align: left;
+}
+
+
+/* Bottom Image */
+.bottom-img {
+  background-image: url("../images/ProfilePicLarge.jpg");
+  background-size: cover;
+  background-position: center;
+  width: auto;
+  height: 800px;
+}
+
+
+/* footer */
+#footer {
+  background-color: #8785a2;
+  height: 250px;
+  color: #fff;
+}
+
+.link-color {
+  color: #fff;
+}
+
+.link-color:hover {
+  color: #ffc7c7;
+}
+
+.github-icon {
+  font-size: 3rem;
+}
+
+.footer-text {
+  padding: 3%;
+}
+
+.footer-p-margin {
+  margin: 0;
 }
