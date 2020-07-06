@@ -28,6 +28,7 @@ a:hover {
 
 .white-section {
   background-color: #FFF;
+  color: #f2aaaa;
 }
 
 .blue-section {
@@ -88,6 +89,17 @@ a:hover {
 
 .about-i {
   font-size: 4rem;
+}
+
+.fa-heart {
+  color: #e75a70;
+}
+
+.fa-grin-stars {
+  color: #ffcc4d;
+}
+
+.fa-rocket {
   color: #8785a2;
 }
 
