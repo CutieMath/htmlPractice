@@ -111,10 +111,6 @@ td, th {
   font-size: 1.2rem;
 }
 
-.notes {
-  font-size: 1.2rem;
-}
-
 .table-div {
   color: #fff;
 }
@@ -171,4 +167,47 @@ a:hover {
 
 .footer-p-margin {
   margin: 0;
+}
+
+
+/* prepare for mobile and tablets */
+@media (max-width:991px){
+  #title{
+    padding: 8% 8% 20%;
+  }
+  .big-math {
+    padding-top: 20%;
+  }
+  h1{
+    font-size: 12rem;
+  }
+  .td-data{
+    padding-left: 10%;
+  }
+  .about-i {
+    font-size: 10rem;
+  }
+  h3, p {
+    font-size: 2.5rem;
+  }
+  .about-title {
+    font-size: 5rem;
+    padding-top: 20%;
+    padding-bottom: 20%;
+  }
+  .notes{
+    font-size: 1.5rem;
+  }
+  table, td, th{
+    font-size: 2.5rem;
+    padding: 4%;
+    border: 3px solid #ffc7c7;
+  }
+
+  .footer-p-margin {
+    font-size: 1.2rem;
+  }
+  .footer-text {
+    padding-top: 5%;
+  }
 }
