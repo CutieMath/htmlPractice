@@ -101,6 +101,10 @@ h3 {
   filter: brightness(1.50);
 }
 
+.notes {
+  font-size: 1.2rem;
+}
+
 table {
   color: #fff;
   text-align: left;
@@ -145,7 +149,6 @@ a:hover {
 /* footer */
 #footer {
   background-color: #8785a2;
-  height: 250px;
   color: #fff;
 }
 
@@ -162,7 +165,7 @@ a:hover {
 }
 
 .footer-text {
-  padding: 3%;
+  padding: 3% 8%;
 }
 
 .footer-p-margin {
@@ -204,9 +207,9 @@ a:hover {
     border: 3px solid #ffc7c7;
   }
   .footer-p-margin {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
-  .footer-text {
-    padding-top: 5%;
+  .github-icon {
+    font-size: 2rem;
   }
 }
