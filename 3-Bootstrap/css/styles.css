@@ -1,3 +1,4 @@
+/* Apply to whole page */
 body {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
@@ -52,7 +53,7 @@ a:hover {
   font-size: 1.2rem;
 }
 
-/* Main CutieMath Section */
+/* Main big CutieMath Section */
 #title {
   position: relative;
 }
@@ -76,7 +77,11 @@ a:hover {
   bottom: 30%;
 }
 
-/* About */
+.loveface-img:hover {
+  filter: brightness(1.2);
+}
+
+/* About Section */
 .about-title {
   padding-top: 10%;
   font-size: 3rem;
@@ -91,6 +96,10 @@ a:hover {
   font-size: 4rem;
 }
 
+.about-i:hover {
+  color: #f2aaaa;
+}
+
 .fa-heart {
   color: #e75a70;
 }
@@ -101,10 +110,6 @@ a:hover {
 
 .fa-rocket {
   color: #8785a2;
-}
-
-.about-i:hover {
-  color: #e75a70;
 }
 
 .icon-header {
@@ -131,7 +136,7 @@ a:hover {
 }
 
 .love-heart:hover {
-  filter: brightness(1.50);
+  filter: brightness(1.5);
 }
 
 .table-div {
@@ -200,16 +205,16 @@ a:hover {
     padding: 8% 8% 20%;
   }
 
+  #projects {
+    padding: 20% 8% 25%;
+  }
+
   .big-math {
     padding-top: 20%;
   }
 
   .big-heading {
     font-size: 12rem;
-  }
-
-  #projects {
-    padding: 20% 8% 25%;
   }
 
   .td-data {
@@ -232,6 +237,10 @@ a:hover {
 
   .notes {
     font-size: 2rem;
+  }
+
+  .love-heart {
+    width: 20%;
   }
 
   .footer-p-margin {
