@@ -180,19 +180,22 @@ a:hover {
   h3, p {
     font-size: 2.5rem;
   }
-  table, td, th{
+  table, td, th {
     font-size: 2.5rem;
     padding: 4%;
     border: 3px solid #ffc7c7;
   }
-  #title{
+  #title {
     padding: 8% 8% 20%;
   }
   .big-math {
     padding-top: 20%;
   }
-  .big-heading{
+  .big-heading {
     font-size: 12rem;
+  }
+  #projects {
+    padding: 20% 8% 25%;
   }
   .td-data{
     padding-left: 10%;
