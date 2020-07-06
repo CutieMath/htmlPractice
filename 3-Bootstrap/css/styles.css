@@ -4,17 +4,20 @@ body {
   font-weight: 700;
 }
 
-h1 {
-  font-family: 'Erica One', monospace;
-  margin: 0;
-  font-size: 15rem;
-  line-height: 0.8;
+table {
+  color: #fff;
+  text-align: left;
 }
 
-#title {
-  background-color: #f2aaaa;
-  position: relative;
+td, th {
+  padding: 10px;
+  font-size: 1.2rem;
 }
+
+a:hover {
+  color: #8785a2;
+}
+
 
 /* Navigation Bar */
 .navbar-brand {
@@ -33,7 +36,20 @@ h1 {
   font-size: 1.2rem;
 }
 
+
 /* Main CutieMath Section */
+#title {
+  background-color: #f2aaaa;
+  position: relative;
+}
+
+.big-heading {
+  font-family: 'Erica One', monospace;
+  margin: 0;
+  font-size: 15rem;
+  line-height: 0.8;
+}
+
 .container-fluid{
   padding: 3% 8%;
 }
@@ -42,7 +58,6 @@ h1 {
   padding: 8%;
 }
 
-/* CutieMath Face */
 .loveface-img {
   width: 15%;
   transform: rotate(25deg);
@@ -55,10 +70,6 @@ h1 {
 /* About */
 #about {
   padding: 3% 8%;
-}
-
-h3 {
-  font-weight: 800;
 }
 
 .about-title {
@@ -78,6 +89,10 @@ h3 {
 
 .about-i:hover {
   color: #e75a70;
+}
+
+.icon-header {
+  font-weight: 800;
 }
 
 .skill-box {
@@ -105,16 +120,6 @@ h3 {
   font-size: 1.2rem;
 }
 
-table {
-  color: #fff;
-  text-align: left;
-}
-
-td, th {
-  padding: 10px;
-  font-size: 1.2rem;
-}
-
 .table-div {
   color: #fff;
 }
@@ -124,9 +129,6 @@ td, th {
   text-decoration: underline;
 }
 
-a:hover {
-  color: #8785a2;
-}
 
 .center-table {
   position: relative;
@@ -137,7 +139,7 @@ a:hover {
 
 
 /* Bottom Image */
-.bottom-img {
+#contact {
   background-image: url("../images/ProfilePicLarge.jpg");
   background-size: cover;
   background-position: center;
@@ -175,23 +177,31 @@ a:hover {
 
 /* prepare for mobile and tablets */
 @media (max-width:991px){
+  h3, p {
+    font-size: 2.5rem;
+  }
+  table, td, th{
+    font-size: 2.5rem;
+    padding: 4%;
+    border: 3px solid #ffc7c7;
+  }
   #title{
     padding: 8% 8% 20%;
   }
   .big-math {
     padding-top: 20%;
   }
-  h1{
+  .big-heading{
     font-size: 12rem;
   }
   .td-data{
     padding-left: 10%;
   }
+  .td-time{
+    padding-right: 10%;
+  }
   .about-i {
     font-size: 10rem;
-  }
-  h3, p {
-    font-size: 2.5rem;
   }
   .about-title {
     font-size: 5rem;
@@ -200,11 +210,6 @@ a:hover {
   }
   .notes{
     font-size: 2rem;
-  }
-  table, td, th{
-    font-size: 2.5rem;
-    padding: 4%;
-    border: 3px solid #ffc7c7;
   }
   .footer-p-margin {
     font-size: 1rem;
