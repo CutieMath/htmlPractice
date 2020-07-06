@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  font-family:'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
@@ -18,6 +18,21 @@ a:hover {
   color: #8785a2;
 }
 
+.container-fluid {
+  padding: 3% 8%;
+}
+
+.pink-section {
+  background-color: #f2aaaa;
+}
+
+.white-section {
+  background-color: #FFF;
+}
+
+.blue-section {
+  background-color: #8785a2;
+}
 
 /* Navigation Bar */
 .navbar-brand {
@@ -36,10 +51,8 @@ a:hover {
   font-size: 1.2rem;
 }
 
-
 /* Main CutieMath Section */
 #title {
-  background-color: #f2aaaa;
   position: relative;
 }
 
@@ -50,11 +63,7 @@ a:hover {
   line-height: 0.8;
 }
 
-.container-fluid{
-  padding: 3% 8%;
-}
-
-.empty-margin{
+.empty-margin {
   padding: 8%;
 }
 
@@ -66,12 +75,7 @@ a:hover {
   bottom: 30%;
 }
 
-
 /* About */
-#about {
-  padding: 3% 8%;
-}
-
 .about-title {
   padding-top: 10%;
   font-size: 3rem;
@@ -100,11 +104,13 @@ a:hover {
   padding-bottom: 9%;
 }
 
-
 /* Projects */
 #projects {
-  background-color: #f2aaaa;
   padding: 10%;
+}
+
+.notes {
+  font-size: 1.2rem;
 }
 
 .love-heart {
@@ -116,10 +122,6 @@ a:hover {
   filter: brightness(1.50);
 }
 
-.notes {
-  font-size: 1.2rem;
-}
-
 .table-div {
   color: #fff;
 }
@@ -129,14 +131,12 @@ a:hover {
   text-decoration: underline;
 }
 
-
 .center-table {
   position: relative;
   top: 10%;
   margin: auto;
   text-align: left;
 }
-
 
 /* Bottom Image */
 #contact {
@@ -147,10 +147,8 @@ a:hover {
   height: 800px;
 }
 
-
 /* footer */
 #footer {
-  background-color: #8785a2;
   color: #fff;
 }
 
@@ -174,49 +172,60 @@ a:hover {
   margin: 0;
 }
 
-
 /* prepare for mobile and tablets */
-@media (max-width:991px){
+@media (max-width:991px) {
   h3, p {
     font-size: 2.5rem;
   }
+
   table, td, th {
     font-size: 2.5rem;
     padding: 4%;
     border: 3px solid #ffc7c7;
   }
+
   #title {
     padding: 8% 8% 20%;
   }
+
   .big-math {
     padding-top: 20%;
   }
+
   .big-heading {
     font-size: 12rem;
   }
+
   #projects {
     padding: 20% 8% 25%;
   }
-  .td-data{
+
+  .td-data {
     padding-left: 10%;
   }
-  .td-time{
+
+  .td-time {
     padding-right: 10%;
   }
+
   .about-i {
     font-size: 10rem;
   }
+
   .about-title {
     font-size: 5rem;
     padding-top: 20%;
     padding-bottom: 20%;
   }
-  .notes{
+
+  .notes {
     font-size: 2rem;
   }
+
   .footer-p-margin {
     font-size: 1rem;
   }
+
   .github-icon {
     font-size: 2rem;
   }
