@@ -19,6 +19,10 @@ a:hover {
   color: #8785a2;
 }
 
+.nav-link {
+  cursor: pointer;
+}
+
 .container-fluid {
   padding: 3% 8%;
 }
@@ -35,6 +39,7 @@ a:hover {
 .blue-section {
   background-color: #8785a2;
 }
+
 
 /* Navigation Bar */
 .navbar-brand {
