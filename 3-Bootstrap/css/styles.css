@@ -137,7 +137,7 @@ a:hover {
 
 .love-heart {
   width: 10%;
-  padding-bottom: 5%;
+  padding-bottom: 7%;
 }
 
 .love-heart:hover {
@@ -242,6 +242,7 @@ a:hover {
 
   .love-heart {
     width: 20%;
+    padding-bottom: 16%;
   }
 
   .project-element {
