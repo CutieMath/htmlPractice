@@ -128,7 +128,7 @@ a:hover {
 
 /* Projects */
 #projects {
-  padding: 10%;
+  padding: 7%;
 }
 
 .notes {
@@ -137,27 +137,29 @@ a:hover {
 
 .love-heart {
   width: 10%;
-  padding-bottom: 10%;
+  padding-bottom: 5%;
 }
 
 .love-heart:hover {
   filter: brightness(1.5);
 }
 
-.table-div {
+.my-projects {
+  text-align: left;
+}
+
+.project-element {
+  padding: 5% 10%;
+  padding-right: 20px;
+}
+
+.project-div {
   color: #fff;
 }
 
 .table-a {
   color: #fff;
   text-decoration: underline;
-}
-
-.center-table {
-  position: relative;
-  top: 10%;
-  margin: auto;
-  text-align: left;
 }
 
 /* Bottom Image */
@@ -196,14 +198,12 @@ a:hover {
 
 /* prepare for mobile and tablets */
 @media (max-width:991px) {
-  h3, p {
+  h3, h5 {
     font-size: 2.5rem;
   }
 
-  table, td, th {
-    font-size: 2.5rem;
-    padding: 4%;
-    border: 3px solid #ffc7c7;
+  p {
+    font-size: 1.5rem;
   }
 
   #title {
@@ -226,14 +226,6 @@ a:hover {
     font-size: 12rem;
   }
 
-  .td-data {
-    padding-left: 10%;
-  }
-
-  .td-time {
-    padding-right: 10%;
-  }
-
   .about-i {
     font-size: 10rem;
   }
@@ -250,6 +242,10 @@ a:hover {
 
   .love-heart {
     width: 20%;
+  }
+
+  .project-element {
+    padding: 7% 5%;
   }
 
   .footer-p-margin {
