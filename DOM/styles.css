@@ -1,0 +1,39 @@
+body {
+  background-color: #3e4149;
+}
+
+h1 {
+  margin: 50px;
+  font-family: 'Lobster', cursive;
+  text-shadow: 5px 0 #ff9999;
+  font-size: 8rem;
+  color: #ffc8c8;
+}
+
+p {
+  font-size: 2rem;
+  color: #ffc8c8;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  width: 80%;
+}
+
+footer {
+  margin-top: 5%;
+  color: #ffc8c8;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+}
