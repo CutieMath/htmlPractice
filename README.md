@@ -10,8 +10,14 @@ Website with HTML and CSS
 https://cutiemath.github.io/htmlPractice/2-AddCSS    
   
 **3-Bootstrap**  
-Learning how to use bootstrap (Current progress-July 2020)  
+Learning how to use bootstrap  
 https://cutiemath.github.io/htmlPractice/3-Bootstrap  
+  
+**4-AddingJavaScript**  
+Learning JavaScript and add it to websites  
+https://cutiemath.github.io/htmlPractice/DOM  
+
+
 
 **Fun**  
 https://cutiemath.github.io/htmlPractice/Fansite/  
