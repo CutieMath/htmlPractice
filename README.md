@@ -16,7 +16,7 @@ https://cutiemath.github.io/htmlPractice/3-Bootstrap
 **4-AddingJavaScript**  
 Learning JavaScript and add it to websites  
 https://cutiemath.github.io/htmlPractice/DOM  
-
+https://cutiemath.github.io/htmlPractice/DOM2  
 
 
 **Fun**  
