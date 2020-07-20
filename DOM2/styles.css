@@ -8,7 +8,12 @@ h1 {
   color: #ffc8c8;
   font-family: "Arvo", cursive;
   text-shadow: 3px 0 #ff9999;
+}
 
+p {
+  font-size: 2rem;
+  color: #ffc8c8;
+  font-family: "Arvo", cursive;
 }
 
 footer {
