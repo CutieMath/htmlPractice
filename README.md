@@ -13,12 +13,15 @@ https://cutiemath.github.io/htmlPractice/2-AddCSS
 Learning how to use bootstrap  
 https://cutiemath.github.io/htmlPractice/3-Bootstrap  
   
-**4-AddingJavaScript**  
-Learning JavaScript and add it to websites  
-https://cutiemath.github.io/htmlPractice/DOM  
-https://cutiemath.github.io/htmlPractice/DOM2  
+**4-jQuery**  
+Learning jQuery  
+https://cutiemath.github.io/htmlPractice/4-jQuery  
+
 
 
 **Fun**  
 https://cutiemath.github.io/htmlPractice/Fansite/  
+Learning JavaScript and add it to websites  
+https://cutiemath.github.io/htmlPractice/DOM  
+https://cutiemath.github.io/htmlPractice/DOM2  
 
