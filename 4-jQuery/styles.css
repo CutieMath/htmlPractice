@@ -1,13 +1,13 @@
 body {
   text-align: center;
-  background-color: #011F3F;
+  background-color: #fccbcb;
 }
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
   margin:  5%;
-  color: #FEF2BF;
+  color: #9796a3;
 }
 
 .container {
@@ -22,7 +22,7 @@ body {
   display: inline-block;
   height: 200px;
   width: 200px;
-  border: 10px solid black;
+  border: 10px solid #9796a3;
   border-radius: 20%;
 }
 
@@ -32,22 +32,22 @@ body {
 }
 
 .red {
-  background-color: red;
+  background-color: #838383;
 }
 
 .green {
-  background-color: green;
+  background-color: #ad9d9d;
 }
 
 .blue {
-  background-color: blue;
+  background-color: #d9adad;
 }
 
 .yellow {
-  background-color: yellow;
+  background-color: #f6f6f6;
 }
 
 .pressed {
   box-shadow: 0 0 20px white;
-  background-color: grey;
+  filter: brightness(130%);
 }
