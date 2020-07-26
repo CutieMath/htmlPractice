@@ -1,0 +1,15 @@
+{
+  "name": "5-nodejs",
+  "version": "1.0.0",
+  "description": "Study Node JS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cutie Math",
+  "license": "ISC",
+  "dependencies": {
+    "superheroes": "^3.0.0",
+    "supervillains": "^3.0.0"
+  }
+}
