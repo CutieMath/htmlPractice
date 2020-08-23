@@ -52,3 +52,12 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+.mid {
+  margin: auto;
+}
+.pinky {
+  background-color: #EE827F;
+}
+.lpinky {
+  background-color: #FFC8C1;
+}
