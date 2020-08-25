@@ -31,7 +31,7 @@ app.post("/", function(req, res) {
   const url = "https://us17.api.mailchimp.com/3.0/lists/5d6a5941f1";
   const options = {
     method: "POST",
-    auth: "cutie:2603fbd6f8b52b3bb6fd005b7c3076d9-us1",
+    auth: "cutie:2603fbd6f8b52b3bb6fd005b7c3076d9-us17",
   }
   const request = https.request(url, options, function(response) {
     if(response.statusCode === 200) {
@@ -52,6 +52,6 @@ app.post("/failure", function(req, res) {
 })
 
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server is running x");
 });
