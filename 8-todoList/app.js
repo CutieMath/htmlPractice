@@ -1,12 +1,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
-
-let newItems = [];
+let newItems = ["baby", "okie"];
 
 app.set("view engine", "ejs");
 // remember this step to use body parser
 app.use(bodyParser.urlencoded({extended: true}));
+// include local css to work
+app.use(express.static("public"));
 
 app.get("/", function(req, res) {
   let today = new Date();
