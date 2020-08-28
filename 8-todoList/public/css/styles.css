@@ -6,7 +6,7 @@ html {
 }
 
 h1 {
-  color: #E0BBE4;
+  color: #FFDFD3;
   padding: 10px;
 }
 
@@ -62,7 +62,7 @@ button {
   border-radius: 50%;
   border-color: transparent;
   background-color: #D291BC;
-  color: #fff;
+  color: #FFDFD3;
   font-size: 30px;
   padding-bottom: 6px;
   border-width: 0;
@@ -90,7 +90,6 @@ input[type="text"]:focus {
 }
 
 footer {
-  color: white;
-  color: rgba(0, 0, 0, 0.5);
+  color: #957DAD;
   text-align: center;
 }
