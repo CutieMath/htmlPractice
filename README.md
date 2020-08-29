@@ -16,6 +16,19 @@ https://cutiemath.github.io/htmlPractice/3-Bootstrap
 **4-jQuery**  
 Learning jQuery  
 https://cutiemath.github.io/htmlPractice/4-jQuery  
+  
+**5-expressServer**  
+Learning express.js  
+  
+**6-weatherAPI**  
+Learning API using NodeJS  
+  
+**7-emailAPI**  
+Making a Mailchimp API using NodeJS  
+  
+**8-todoList**  
+Making a todoList using NodeJS, EJS  
+https://quiet-hamlet-87798.herokuapp.com/
 
 
 
