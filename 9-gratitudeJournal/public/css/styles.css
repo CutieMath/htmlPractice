@@ -27,8 +27,13 @@ h1 {
   color: #D0B7C8 !important;
 }
 
-.navbar-brand {
+.navbar-brand a{
   color: #D0B7C8 !important;
+}
+
+.navbar-brand a:hover {
+  color: #D0B7C8 !important;
+  text-decoration: none;
 }
 
 .footer-padding {
