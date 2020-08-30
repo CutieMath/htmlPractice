@@ -1,6 +1,18 @@
 <%- include("partials/header"); -%>
 
-<h1>Home</h1>
-<p> <%= homeContent %> </p>
+<div class="startContent">
+  <h1>Home</h1>
+  <p> <%= homeContent %> </p>
+</div>
+
+<div class="postContent">
+  <%# use foreach method for the function %>
+  <% postContents.forEach(function(content) { %>
+    <div class="post">
+      <h3 class="postTitle"> <%= content.title %> </h3>
+      <p> <%= content.journal %> </p>
+    </div>
+  <% }); %>
+</div>
 
 <%- include("partials/footer"); -%>

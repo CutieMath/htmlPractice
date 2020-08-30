@@ -41,6 +41,14 @@ h1 {
   text-decoration: none;
 }
 
+.post {
+  margin-top: 50px;
+}
+
+.postTitle {
+  color: #D0B7C8;
+}
+
 .titleGroup {
   margin-top: 20px;
 }
@@ -60,7 +68,7 @@ h1 {
   background-color: #D0B7C8;
 }
 
-.btn:active {
+.btn::selection {
   background-color: #D0B7C8 !important;
 }
 
