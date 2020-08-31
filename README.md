@@ -28,7 +28,11 @@ Making a Mailchimp API using NodeJS
   
 **8-todoList**  
 Making a todoList using NodeJS, EJS  
-https://quiet-hamlet-87798.herokuapp.com/
+https://quiet-hamlet-87798.herokuapp.com/  
+  
+**9-gratitudeJournal**  
+Making a gratitude journal using Nodejs, EJS  
+https://cutie-math.herokuapp.com/  
 
 
 
