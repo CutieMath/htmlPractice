@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const _ = require('lodash');
 
 const homeStartingContent = "This is Cutie Math's Gratitude Journal.";
 const aboutContent = "I started this GRATITUDE JOURNAL to practice web development use Node.js and EJS.";
@@ -47,6 +48,20 @@ app.post("/compose", function(req, res) {
   };
   posts.push(post);
   res.redirect("/");
+});
+
+app.get("/posts/:name", function(req, res) {
+  const param = _.lowerCase(req.params.name);
+  posts.forEach(function(post){
+    const title = _.lowerCase(post.title);
+    if(title === param){
+      res.render("post", {
+        title: post.title,
+        journal: post.journal
+      });
+    }
+  });
+  res.end();
 });
 
 app.listen(3000, function() {

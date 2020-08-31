@@ -3,8 +3,12 @@ body {
   font-size: 20px;
 }
 
-h1 {
+h1, a {
   color: #D0B7C8;
+}
+
+a:hover {
+  color: #AC87AA;
 }
 
 .form-control:focus {
