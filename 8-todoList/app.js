@@ -29,39 +29,25 @@ const cloudSecurity = new Item ({
   name: "Cloud Security Elite"
 });
 const defaultItems = [webDev, appDev, cloudSecurity];
-Item.insertMany(defaultItems, function(err) {
-  if(err) {
-    console.log(err);
-  } else {
-    console.log("Success!");
-  }
-});
 
-// prepare data from the database
-let aList = "";
-let listArray = [];
-
-Item.find({}, function(err, items) {
-    if(err) {
-      console.log(err);
-    } else {
-      items.forEach((item) => {
-        aList = item.name;
-        listArray.push(aList);
-      });
-    };
-});
 
 // render data from the database
 app.get("/", function(req, res) {
-
   Item.find({}, function(err, foundItems) {
-    console.log(foundItems);
-  });
-
-  res.render("list", {
-    listTitle: "Today",
-    newListItems: listArray
+    if(foundItems.length === 0) {
+      Item.insertMany(defaultItems, function(err) {
+        if(err) {
+          console.log(err);
+        } else {
+          console.log("Default data inserted success!");
+        }
+      });
+      res.redirect("/");
+    } else {
+      res.render("list", {
+        listTitle: "Today", newListItems: foundItems
+      });
+    }
   });
 });
 
@@ -70,14 +56,24 @@ app.get("/work", function(req, res) {
 });
 
 app.post("/", function(req, res) {
-  const item = req.body.newItem;
-  if (req.body.list === "Work") {
-    workItems.push(item);
-    res.redirect("/work");
-  } else {
-    newItems.push(item);
-    res.redirect("/");
-  }
+  const itemName = req.body.newItem;
+  const item = new Item ({
+    name: itemName
+  });
+  item.save();
+  res.redirect("/");
+});
+
+app.post("/delete", function(req, res) {
+  const checkedItemId = req.body.checkbox;
+  Item.deleteOne({_id: checkedItemId}, function(err) {
+    if(err) {
+      console.log(err);
+    } else {
+      console.log("Deleted x");
+      res.redirect("/");
+    };
+  });
 });
 
 app.listen(process.env.PORT || 3000, function() {
