@@ -7,26 +7,25 @@ mongoose.connect("mongodb://localhost:27017/babyDB", { useUnifiedTopology
 
 // Insert data
 const fruitSchema = new mongoose.Schema ({
-  name: String,
-  rating: Number,
+  name: {
+    type: String,
+    required: [true, "no name specified"]
+  },
+  rating: {
+    type: Number,
+    min: 1,
+    max: 10
+  },
   review: String
 });
 const Fruit = mongoose.model("Fruit", fruitSchema);
-const orange = new Fruit ({
-  name: "Orange",
-  rating: 10,
+const fruit = new Fruit ({
+  name: "Apple",
+  rating: 9,
   review: "Cute."
 });
-const blueberry = new Fruit ({
-  name: "blueberry",
-  score: 10,
-  review: "Vitamin C"
-});
-const banana = new Fruit ({
-  name: "banana",
-  score: 10,
-  review: "Yummy!"
-});
+
+//fruit.save();
 
 // Fruit.insertMany([orange, blueberry, banana], function(err) {
 //   if(err) {
@@ -37,15 +36,15 @@ const banana = new Fruit ({
 // });
 
 // print all the JSON data
-Fruit.find(function(err, fruits){
-    if(err) {
-      console.log(err);
-    } else {
-      console.log(fruits);
-    }
-});
+// Fruit.find(function(err, fruits){
+//     if(err) {
+//       console.log(err);
+//     } else {
+//       console.log(fruits);
+//     }
+// });
 
-// print specifict data
+// print specified data
 Fruit.find(function(err, fruits) {
   if(err) {
     console.log(err);
@@ -55,5 +54,14 @@ Fruit.find(function(err, fruits) {
     fruits.forEach((fruit) => {
       console.log(fruit.name);
     });
+  };
+});
+
+// delete records
+Fruit.deleteOne({name: "blueberry"}, function(err) {
+  if(err) {
+    console.log(err);
+  } else {
+    console.log("Successfully deleted.");
   };
 });
