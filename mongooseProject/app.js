@@ -24,8 +24,37 @@ const fruit = new Fruit ({
   rating: 9,
   review: "Cute."
 });
-
 //fruit.save();
+
+// adding relationships
+const peopleSchema = new mongoose.Schema ({
+    name: String,
+    age: Number,
+    favouriteFruit: fruitSchema
+});
+const People = mongoose.model("People", peopleSchema);
+const mango = new Fruit({
+  name: "Mango",
+  rating: 9,
+  review: "Yuuuuum x"
+})
+mango.save();
+// const people = new People({
+//   name: "Yuxin",
+//   age: 30,
+//   favouriteFruit: apple
+// });
+// people.save();
+
+// add relationships to one record
+People.updateOne({name: "Baby"}, {favouriteFruit: mango}, function(err) {
+  if(err) {
+    console.log(err);
+  } else {
+    console.log("Success!");
+  }
+});
+
 
 // Fruit.insertMany([orange, blueberry, banana], function(err) {
 //   if(err) {
@@ -58,10 +87,10 @@ Fruit.find(function(err, fruits) {
 });
 
 // delete records
-Fruit.deleteOne({name: "blueberry"}, function(err) {
-  if(err) {
-    console.log(err);
-  } else {
-    console.log("Successfully deleted.");
-  };
-});
+// Fruit.deleteOne({name: "blueberry"}, function(err) {
+//   if(err) {
+//     console.log(err);
+//   } else {
+//     console.log("Successfully deleted.");
+//   };
+// });
