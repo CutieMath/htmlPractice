@@ -13,7 +13,7 @@ app.use(express.static("public"));
 // Create a new db in mongodb
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
-mongoose.connect("mongodb://localhost:27017/todoListDB", { useUnifiedTopology
+mongoose.connect("mongodb+srv://Yuxin:yuxin@cluster0.bjnml.mongodb.net/todoListDB?retryWrites=true&w=majority", { useUnifiedTopology
 : true });
 
 // Insert data
@@ -54,17 +54,11 @@ app.get("/", function(req, res) {
   });
 });
 
-app.get("/work", function(req, res) {
-  res.render("list", {listTitle: "Work List", newListItems: workItems});
-});
-
 //dynamic routes
 app.get("/:customName", function(req, res) {
   const customName = _.capitalize(req.params.customName);
   List.findOne({name: customName}, function(err, foundList) {
-    if(err) {
-      console.log(err);
-    } else {
+    if(!err) {
       if(!foundList){
         // create a new list
         const list = new List ({
@@ -73,7 +67,7 @@ app.get("/:customName", function(req, res) {
         });
         list.save();
         res.redirect("/" + customName);
-      }else {
+      } else {
         // show existing list
         res.render("list", {
           listTitle: foundList.name,
@@ -84,7 +78,6 @@ app.get("/:customName", function(req, res) {
   });
 });
 
-
 app.post("/", function(req, res) {
   const itemName = req.body.newItem;
   const listName = req.body.list;
@@ -94,7 +87,7 @@ app.post("/", function(req, res) {
 
   if(listName === "Today") {
     item.save();
-    res.redirect("/" + listName);
+    res.redirect("/");
   } else {
     List.findOne({name: listName}, function(err, foundList) {
       foundList.items.push(item);
@@ -126,7 +119,10 @@ app.post("/delete", function(req, res) {
   };
 });
 
-
-app.listen(process.env.PORT || 3000, function() {
+let port = process.env.PORT;
+if(port == null || port == ""){
+  port = 3000;
+}
+app.listen(port, function() {
   console.log("Server started on port 3000 x");
 })
