@@ -27,7 +27,8 @@ Learning API using NodeJS
 Making a Mailchimp API using NodeJS  
   
 **8-todoList**  
-Making a todoList using NodeJS, EJS  
+Making a todoList using NodeJS, EJS. Deployed on Heroku. Used MongoDB    
+https://rocky-badlands-37403.herokuapp.com/
   
   
 **9-gratitudeJournal**  
