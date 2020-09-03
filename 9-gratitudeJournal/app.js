@@ -1,25 +1,39 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require('lodash');
-
-const homeStartingContent = "This is Cutie Math's Gratitude Journal.";
-const aboutContent = "I started this GRATITUDE JOURNAL to practice web development use Node.js and EJS.";
-const contactContent = "Cutie.Math@protonmail.com";
-let posts = [];
-
 const app = express();
 
-app.set('view engine', 'ejs');
+const homeStartingContent = "This is Cutie Math's Gratitude Journal.";
+const aboutContent = "I made this GRATITUDE JOURNAL to practice web development use Node.js and EJS.";
+const contactContent = "Cutie.Math@protonmail.com";
 
+app.set('view engine', 'ejs');
+// use body parser
 app.use(bodyParser.urlencoded({extended: true}));
+// include local css
 app.use(express.static("public"));
+
+// create a new db in mongodb
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.connect('mongodb://localhost:27017/blogDB', { useUnifiedTopology: true });
+
+// Insert data
+const postSchema = {
+  title: String,
+  content: String
+};
+const Post = mongoose.model("Post", postSchema);
 
 
 app.get("/", function(req, res) {
-  res.render("home", {
-    homeContent: homeStartingContent,
-    postContents: posts
+  Post.find({}, function(err, foundPosts) {
+    res.render("home", {
+      homeContent: homeStartingContent,
+      postContents: foundPosts
+    });
   });
 });
 
@@ -40,13 +54,17 @@ app.get("/compose", function(req, res) {
 });
 
 app.post("/compose", function(req, res) {
-  const title = req.body.title;
+  const postTitle = req.body.title;
   const journal = req.body.journal;
-  const post = {
-    title: title,
-    journal: journal
-  };
-  posts.push(post);
+
+  // create a new post instance use user entered data
+  const post = new Post({
+    title: postTitle,
+    content: journal
+  });
+
+  // save the post into database
+  post.save();
   res.redirect("/");
 });
 
