@@ -64,22 +64,23 @@ app.post("/compose", function(req, res) {
   });
 
   // save the post into database
-  post.save();
-  res.redirect("/");
-});
-
-app.get("/posts/:name", function(req, res) {
-  const param = _.lowerCase(req.params.name);
-  posts.forEach(function(post){
-    const title = _.lowerCase(post.title);
-    if(title === param){
-      res.render("post", {
-        title: post.title,
-        journal: post.journal
-      });
+  post.save(function(err) {
+    if(!err) {
+      res.redirect("/");
     }
   });
-  res.end();
+});
+
+app.get("/posts/:postId", function(req, res) {
+  const postId = req.params.postId;
+
+
+  Post.findOne({_id: postId}, function(err, foundPost){
+    res.render("post", {
+      title: foundPost.title,
+      journal: foundPost.content
+    })
+  });
 });
 
 app.listen(process.env.PORT || 3000, function() {
