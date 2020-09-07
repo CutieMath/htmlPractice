@@ -1,4 +1,4 @@
-# web development Practice
+# Web Development Practice
 Practice web development by creating personal websites  
  
 **1-BasicHTML**    
