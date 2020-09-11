@@ -43,8 +43,8 @@ Making a website to learn authentication. In progress.
 
 
 **Fun**  
-https://cutiemath.github.io/htmlPractice/Fansite/  
+https://cutiemath.github.io/htmlPractice/z-Fansite/  
 Learning JavaScript and add it to websites  
-https://cutiemath.github.io/htmlPractice/DOM  
-https://cutiemath.github.io/htmlPractice/DOM2  
+https://cutiemath.github.io/htmlPractice/z-DOM  
+https://cutiemath.github.io/htmlPractice/z-DOM2  
 
