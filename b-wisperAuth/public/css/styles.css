@@ -6,7 +6,11 @@ h1, p {
   color: #fff;
 }
 
-.pink {
+hr {
+  border-color: grey;
+}
+
+.background-style {
   background-color: #181C1F;
 }
 
@@ -28,7 +32,16 @@ h1, p {
 
 .btn {
   width: 120px;
-  border-color: #fff;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #DF9DA9;
+}
+
+.btn-pink {
+  background-color: #DF9DA9;
 }
 
 .keyIcon {
