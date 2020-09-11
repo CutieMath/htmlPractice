@@ -1,6 +1,13 @@
-
 body {
-  background-color: #E8ECEF;
+  background-color: #181C1F;
+}
+
+h1, p {
+  color: #fff;
+}
+
+.pink {
+  background-color: #181C1F;
 }
 
 .centered {
@@ -13,6 +20,15 @@ body {
   font-size: 2rem;
   color: #fff;
   background-color: #000;
+}
+
+.dark-btn {
+  background-color: #181C1F;
+}
+
+.btn {
+  width: 120px;
+  border-color: #fff;
 }
 
 .keyIcon {
