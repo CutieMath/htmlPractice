@@ -6,6 +6,9 @@ const mongoose = require("mongoose");
 const app = express();
 const encrypt = require("mongoose-encryption");
 
+//fetch the secret from .env
+const secret = process.env.SECRET;
+
 
 // setup ejs
 app.set("view engine", "ejs");
