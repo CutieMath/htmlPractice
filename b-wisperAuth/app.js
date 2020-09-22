@@ -38,7 +38,8 @@ mongoose.connect("mongodb://localhost:27017/userDB", { useUnifiedTopology: true 
 // add mongoose schema for encryption
 const userSchema = new mongoose.Schema ({
   email: String,
-  password: String
+  password: String,
+  googleId: String
 });
 // This can encrypt and salt user data
 userSchema.plugin(passportLocalMongoose);
@@ -48,8 +49,15 @@ const User = new mongoose.model("User", userSchema);
 
 // add cookies and destroy them
 passport.use(User.createStrategy());
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+// add new configuration for local serialize
+passport.serializeUser(function(user, done) {
+  done(null, user.id);
+});
+passport.deserializeUser(function(id, done) {
+  User.findById(id, function(err, user) {
+    done(err, user);
+  });
+});
 
 // Google oauth20
 passport.use(new GoogleStrategy ({
@@ -61,6 +69,7 @@ passport.use(new GoogleStrategy ({
   userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
 },
 function(accessToken, refreshToken, profile, cb) {
+  console.log(profile);
   User.findOrCreate({ googleId: profile.id }, function(err, user) {
     return cb(err, user);
   });
@@ -72,8 +81,14 @@ app.get("/", function(req, res) {
   res.render("home");
 });
 
-app.get("/auth/google", passport.authenticate("google", { scope: ["profile"] })
+app.get("/auth/google", passport.authenticate('google', { scope: ["profile"] })
 );
+
+app.get("/auth/google/secrets",
+        passport.authenticate('google', { failureRedirect: "/login" }),
+        function(req, res) {
+          res.redirect('/secrets');
+        });
 
 app.get("/login", function(req, res) {
   res.render("login");
