@@ -7,6 +7,7 @@ const session = require('express-session');
 const passport = require('passport');
 const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const FacebookStrategy = require('passport-facebook').Strategy;
 const findOrCreate = require('mongoose-findorcreate');
 
 
@@ -39,7 +40,8 @@ mongoose.connect("mongodb://localhost:27017/userDB", { useUnifiedTopology: true 
 const userSchema = new mongoose.Schema ({
   email: String,
   password: String,
-  googleId: String
+  googleId: String,
+  secret: String
 });
 // This can encrypt and salt user data
 userSchema.plugin(passportLocalMongoose);
@@ -69,7 +71,6 @@ passport.use(new GoogleStrategy ({
   userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
 },
 function(accessToken, refreshToken, profile, cb) {
-  console.log(profile);
   User.findOrCreate({ googleId: profile.id }, function(err, user) {
     return cb(err, user);
   });
@@ -77,10 +78,26 @@ function(accessToken, refreshToken, profile, cb) {
 ));
 
 
+// Facebook
+passport.use(new FacebookStrategy ({
+    clientID: process.env.FACEBOOK_APP_ID,
+    clientSecret: process.env.FACEBOOK_APP_SECRET,
+    callbackURL: "http://localhost:3000/auth/facebook/secrets"
+  },
+  function(accessToken, refreshToken, profile, done) {
+    User.findOrCreate({ facebookId: profile.id }, function(err, user) {
+      if (err) { return done(err); }
+      done(null, user);
+    });
+  }
+));
+
+
 app.get("/", function(req, res) {
   res.render("home");
 });
 
+// auth routes for google
 app.get("/auth/google", passport.authenticate('google', { scope: ["profile"] })
 );
 
@@ -89,6 +106,16 @@ app.get("/auth/google/secrets",
         function(req, res) {
           res.redirect('/secrets');
         });
+
+// auth routes for facebook
+app.get('/auth/facebook', passport.authenticate('facebook')
+);
+
+app.get('/auth/facebook/secrets',
+  passport.authenticate('facebook', { successRedirect: '/',
+                                      failureRedirect: '/login' })
+                                    );
+
 
 app.get("/login", function(req, res) {
   res.render("login");
@@ -112,12 +139,46 @@ app.post("/register", function(req, res) {
 });
 
 // if people have already logged in, they can go to secret page directly
+// Also add other secrets
 app.get("/secrets", function(req, res){
+  // find where the secrets are not null
+  User.find({"secret": {$ne: null}}, function(err, foundUsers){
+    if(err) {
+      console.log(err);
+    } else {
+      if(foundUsers) {
+        res.render("secrets", {usersWithSecrets: foundUsers});
+      }else {
+        console.log("Didn't find users");
+      }
+    }
+  });
+});
+
+// implement submit secrets
+app.get("/submit", function(req, res){
   if(req.isAuthenticated()){
-    res.render("secrets");
+    res.render("submit");
   } else {
     res.redirect("/login");
   }
+});
+
+app.post("/submit", function(req, res){
+  // get the request by its name
+  const submitted = req.body.secret;
+  User.findById(req.user.id, function(err, foundUser){
+      if(err){
+        console.log(err);
+      } else {
+        if(foundUser) {
+          foundUser.secret = submitted;
+          foundUser.save(function(){
+            res.redirect("/secrets");
+          });
+        }
+      }
+  });
 });
 
 app.get("/logout", function(req, res) {
