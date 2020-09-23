@@ -7,7 +7,7 @@ const session = require('express-session');
 const passport = require('passport');
 const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
-const FacebookStrategy = require('passport-facebook').Strategy;
+//const FacebookStrategy = require('passport-facebook').Strategy;
 const findOrCreate = require('mongoose-findorcreate');
 
 
@@ -79,18 +79,18 @@ function(accessToken, refreshToken, profile, cb) {
 
 
 // Facebook
-passport.use(new FacebookStrategy ({
-    clientID: process.env.FACEBOOK_APP_ID,
-    clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: "http://localhost:3000/auth/facebook/secrets"
-  },
-  function(accessToken, refreshToken, profile, done) {
-    User.findOrCreate({ facebookId: profile.id }, function(err, user) {
-      if (err) { return done(err); }
-      done(null, user);
-    });
-  }
-));
+// passport.use(new FacebookStrategy ({
+//     clientID: process.env.FACEBOOK_APP_ID,
+//     clientSecret: process.env.FACEBOOK_APP_SECRET,
+//     callbackURL: "http://localhost:3000/auth/facebook/secrets"
+//   },
+//   function(accessToken, refreshToken, profile, done) {
+//     User.findOrCreate({ facebookId: profile.id }, function(err, user) {
+//       if (err) { return done(err); }
+//       done(null, user);
+//     });
+//   }
+// ));
 
 
 app.get("/", function(req, res) {
@@ -108,13 +108,13 @@ app.get("/auth/google/secrets",
         });
 
 // auth routes for facebook
-app.get('/auth/facebook', passport.authenticate('facebook')
-);
-
-app.get('/auth/facebook/secrets',
-  passport.authenticate('facebook', { successRedirect: '/',
-                                      failureRedirect: '/login' })
-                                    );
+// app.get('/auth/facebook', passport.authenticate('facebook')
+// );
+//
+// app.get('/auth/facebook/secrets',
+//   passport.authenticate('facebook', { successRedirect: '/',
+//                                       failureRedirect: '/login' })
+//                                     );
 
 
 app.get("/login", function(req, res) {
