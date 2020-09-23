@@ -37,7 +37,7 @@ https://cutie-math.herokuapp.com/
   
   
 **a-wisperAuth**  
-Making a website to learn authentication. In progress.  
+Making a website to learn authentication. Ready to be deployed x 
   
   
 
