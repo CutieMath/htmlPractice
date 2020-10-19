@@ -7,7 +7,7 @@
     font-family: "Montserrat", sans-serif;
   }
   body {
-    background: #eee;
+    background: #fff;
     padding: 0 16px;
   }
   
@@ -38,19 +38,19 @@
   .note {
     background: #FEC8D8;
     border-radius: 7px;
-    box-shadow: 0 2px 5px #957DAD;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     padding: 10px;
     width: 240px;
     margin: 16px;
     float: left;
   }
   .note h1 {
-    color: #fff;
-    font-size: 1.1em;
+    color: #D291BC;
+    font-size: 1.4em;
     margin-bottom: 6px;
   }
   .note p {
-    color: #D291BC;
+    color: #fff;
     font-size: 1.1em;
     margin-bottom: 10px;
     white-space: pre-wrap;
