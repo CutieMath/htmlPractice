@@ -36,7 +36,7 @@ Making a gratitude journal using Nodejs, EJS
 https://cutie-math.herokuapp.com/  
   
   
-**a-wisperAuth**  
+**b-wisperAuth**  
 Making a website to learn authentication. 
   
   
